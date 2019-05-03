@@ -1,0 +1,163 @@
+.flash-box {
+  width: 100vw;
+  height: 24px;
+  background-color: #38AEF0;
+  .notice {
+    text-align: center;
+    color: $white;
+  }
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $white;
+  .main-left {
+    width: 300px;
+    height: 100vh;
+    background-color: #2f3e51;
+    float: left;
+  
+    .left-header { 
+      height: 100px;
+      line-height: 100px;
+      background-color: #253141;
+        p {
+          // tetsuro
+          color: $white;
+          font-weight: bold;
+          font-size: 16px;
+          width: 63px;
+          float: left;
+          padding-left: 20px;
+          
+        }
+        ul {
+          display: flex;
+          li {
+            display: flex;
+            margin: 43px 20px auto auto;
+            i {
+              // 編集アイコン
+              font-family: FontAwesome;
+              content: '\fa-edit';
+              color: $white;
+              float: left;
+              padding-right: 5px;
+            }
+            i {
+              // 歯車アイコン
+              font-family: FontAwesome;
+              content: '\fa-cog';
+              color: $white;
+              float: left;
+              padding-left: 5px;
+            } 
+          }
+        }
+    }
+    .groups {
+      margin: 20px 20px auto 20px;
+      .group {
+        margin-bottom: 40px;
+        color: $white;
+        font-weight: bold;
+        p.group__group-name {
+          font-size: 15px;
+        }
+        p.group__latest-message {
+          font-size: 11px;
+          margin: 5px 0 0 0;
+        }
+      }  
+    }
+  }
+  .main-right {
+    width: calc(100vw - 300px);
+    height: 100vh;
+    background-color: $white;
+    float: right;
+    position: relative;
+    
+    .right-header {
+      height: 100px;
+      border-bottom: 1px solid #eeeeee;
+      padding: 0 40px;
+      display: flex;
+      .current-group {
+        h2 {
+          font-size: 20px;
+          color: #333333;
+          padding: 35px 0 15px 0;
+        }
+       ul {
+        font-size: 12px;
+        color: $gray;
+       }
+      }
+      .right-header__edit-btn {
+        display: flex;
+        height: 40px;
+        line-height: 40px;
+        width: 30px;
+        padding: 0 20px;
+        border: solid 1px #38aef0;
+        color: #38aef0;
+        margin: 28px 0 auto auto;
+      }
+    }
+    .messages {
+      padding: 46px 40px;
+      .message {
+        padding-bottom: 40px;
+        .basic-info {
+          display: flex;
+          p.basic-info__user {
+            font-size: 16px;
+            font-weight: bold;
+            color: $thin_gray;
+          }
+          p.basic-info__date {
+            font-size: 12px;
+            color: $gray;
+            margin-left: 10px;
+            display: flex;
+          }
+        }
+        p.message_text {
+          font-size: 14px;
+          color: $thin_gray;
+          margin: 10px auto 10px 0;
+        }
+      }
+    }
+    .form {
+      width: calc(100vw - 300px);
+      padding: 20px 0 20px 0;
+      background-color: #ddd;
+      position: absolute;
+      bottom: 0;
+        form.new-message { 
+          .input-box {
+            padding: 0 0 0 40px;
+            
+            .input-box__text {
+              font-size: 16px;
+              color: $gray;
+              border: none;
+              height: 50px;
+              padding-left: 10px;
+              width: 447px;
+            }
+            .upload-label {
+              padding: o 10px 0 0;
+              i.fa.fa-picture-o{
+                vertical-align: bottom;
+              }
+            }
+
+          }
+        }
+      }
+  }
+}
+

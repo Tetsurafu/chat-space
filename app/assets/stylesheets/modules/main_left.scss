@@ -1,0 +1,64 @@
+.flash-box {
+  width: 100vw;
+  height: 24px;
+  background-color: #38AEF0;
+  .notice {
+    text-align: center;
+    color: $white;
+  }
+}
+.main-left {
+  width: 300px;
+  height: 100vh;
+  background-color: #2f3e51;
+  float: left;
+  .left-header { 
+    height: 100px;
+    line-height: 100px;
+    background-color: #253141;
+      p {
+        color: $white;
+        font-weight: bold;
+        font-size: 16px;
+        width: 63px;
+        float: left;
+        padding-left: 20px;
+      }
+      ul {
+        display: flex;
+        li {
+          display: flex;
+          margin: 43px 20px auto auto;
+          @mixin i {
+            font-family: FontAwesome;
+            color: $white;
+            float: left;
+            content: '\fa-edit';
+            padding-right: 5px;
+          }
+          i {
+            @include i;
+            content: '\fa-cog';
+            padding-left: 5px;
+          } 
+        }
+      }
+  }
+  .groups {
+    margin: 20px 20px auto 20px;
+    .group {
+      margin-bottom: 40px;
+      color: $white;
+      font-weight: bold;
+      &__group-name {
+        font-size: 15px;
+      }
+      &__latest-message {
+        font-size: 11px;
+        margin-top: 5px;
+      }
+    }  
+  }
+}
+
+

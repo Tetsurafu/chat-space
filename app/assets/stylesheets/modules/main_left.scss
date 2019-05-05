@@ -1,11 +1,6 @@
 .flash-box {
-  width: 100vw;
-  height: 24px;
-  background-color: #38AEF0;
-  .notice {
-    text-align: center;
-    color: $white;
-  }
+  @import "mixin/flash-box";
+  @include flash-box;
 }
 .main-left {
   width: 300px;
@@ -16,7 +11,7 @@
     height: 100px;
     line-height: 100px;
     background-color: #253141;
-      p {
+      &__user-name {
         color: $white;
         font-weight: bold;
         font-size: 16px;
@@ -24,9 +19,9 @@
         float: left;
         padding-left: 20px;
       }
-      ul {
+      .user-menu {
         display: flex;
-        li {
+        &__icon {
           display: flex;
           margin: 43px 20px auto auto;
           i {

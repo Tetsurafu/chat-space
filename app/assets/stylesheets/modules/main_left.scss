@@ -29,15 +29,15 @@
         li {
           display: flex;
           margin: 43px 20px auto auto;
-          @mixin i {
-            font-family: FontAwesome;
-            color: $white;
-            float: left;
+          i {
+            @import "mixin/iconic";
+            @include iconic;
             content: '\fa-edit';
             padding-right: 5px;
           }
           i {
-            @include i;
+            @import "mixin/iconic";
+            @include iconic;
             content: '\fa-cog';
             padding-left: 5px;
           } 

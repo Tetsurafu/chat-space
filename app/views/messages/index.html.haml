@@ -6,9 +6,9 @@
     %p.left-header__user-name tetsuro
     %ul.user-menu
       %li.user-menu__icon
-        %a{:href => "/groups/new"}
+        = link_to "groups/new" do
           %i.fa.fa-edit
-        %a{:href => "/users/339/edit"}
+        = link_to "/users/edit" do
           %i.fa.fa-cog
   .groups 
     .group

@@ -6,10 +6,10 @@
     %p.left-header__user-name tetsuro
     %ul.user-menu
       %li.user-menu__icon
-        = link_to
-        %i.fa.fa-edit
-        = link_to
-        %i.fa.fa-cog
+        %a{:href => "/groups/new"}
+          %i.fa.fa-edit
+        %a{:href => "/users/339/edit"}
+          %i.fa.fa-cog
   .groups 
     .group
       %p.group__group-name Test 2

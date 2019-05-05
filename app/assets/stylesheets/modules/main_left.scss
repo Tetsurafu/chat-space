@@ -29,14 +29,18 @@
         li {
           display: flex;
           margin: 43px 20px auto auto;
-          i {
-            @include icon(0 5px 0 0);
+          @mixin i {
+            font-family: FontAwesome;
+            color: $white;
+            float: left;
             content: '\fa-edit';
+            padding-right: 5px;
           }
           i {
-            @include icon(0 0 0 5px);
+            @include i;
             content: '\fa-cog';
-          }  
+            padding-left: 5px;
+          } 
         }
       }
   }

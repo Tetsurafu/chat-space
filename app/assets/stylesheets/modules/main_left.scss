@@ -29,18 +29,13 @@
         li {
           display: flex;
           margin: 43px 20px auto auto;
-          @mixin i {
-            font-family: FontAwesome;
-            color: $white;
-            float: left;
-            content: '\fa-edit';
-            padding-right: 5px;
+          i {
+            @include icon(\fa-edit, 0 5px 0 0);
+            
           }
           i {
-            @include i;
-            content: '\fa-cog';
-            padding-left: 5px;
-          } 
+            @include icon(\fa-cog, 0 0 0 5px);
+          }  
         }
       }
   }

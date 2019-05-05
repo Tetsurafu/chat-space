@@ -1,0 +1,7 @@
+@mixin icon($content, $padding) {
+  font-family: FontAwesome;
+  color: $white;
+  float: left;
+  content: $content;
+  padding: $padding;
+}

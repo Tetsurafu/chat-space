@@ -6,10 +6,10 @@
     %p.left-header__user-name tetsuro
     %ul.user-menu
       %li.user-menu__icon
-        %a{:href => "/groups/new"}
-          %i.fa.fa-edit
-        %a{:href => "/users/339/edit"}
-          %i.fa.fa-cog
+        = link_to
+        %i.fa.fa-edit
+        = link_to
+        %i.fa.fa-cog
   .groups 
     .group
       %p.group__group-name Test 2
@@ -33,13 +33,13 @@
       .basic-info
         %p.basic-info__user tetsuro
         %p.basic-info__date 2019/04/22(Mon) 10:24:46
-      %p.message_text Second day of Chat Space
+      %p.message__text Second day of Chat Space
 
     .message
       .basic-info
         %p.basic-info__user tetsuro
         %p.basic-info__date 2019/04/28(Sun) 17:47:08
-      %p.message_text Check one, two
+      %p.message__text Check one, two
 
   .form   
     %form

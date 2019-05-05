@@ -1,0 +1,104 @@
+.main-right {
+  width: calc(100vw - 300px);
+  height: 100vh;
+  background-color: $white;
+  float: right;
+  position: relative;
+  .right-header {
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0 40px;
+    display: flex;
+    background-color: #fff;
+    .current-group {
+      h2 {
+        font-size: 20px;
+        color: #333333;
+        padding: 35px 0 15px 0;
+      }
+      ul {
+      font-size: 12px;
+      color: $gray;
+      }
+    }
+    .right-header__edit-btn {
+      display: flex;
+      height: 40px;
+      line-height: 40px;
+      width: 30px;
+      padding: 0 20px;
+      border: solid 1px $blue;
+      color: $blue;
+      margin: 28px 0 auto auto;
+      cursor: pointer; 
+    }
+  }
+  .messages {
+    padding: 46px 40px;
+    .message {
+      padding-bottom: 40px;
+      .basic-info {
+        display: flex;
+        &__user {
+          font-size: 16px;
+          font-weight: bold;
+          color: $thin_gray;
+        }
+        &__date {
+          font-size: 12px;
+          color: $gray;
+          margin-left: 10px;
+          display: flex;
+        }
+      }
+      p.message__text {
+        font-size: 14px;
+        color: $thin_gray;
+        margin: 10px auto 10px 0;
+      }
+    }
+  }
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 40px 20px 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 157px);
+      padding-left: 10px;
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: #38AEF0;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      cursor: pointer;
+    }
+  }
+}
+

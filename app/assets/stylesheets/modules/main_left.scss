@@ -30,11 +30,12 @@
           display: flex;
           margin: 43px 20px auto auto;
           i {
-            @include icon(\fa-edit, 0 5px 0 0);
-            
+            @include icon(0 5px 0 0);
+            content: '\fa-edit';
           }
           i {
-            @include icon(\fa-cog, 0 0 0 5px);
+            @include icon(0 0 0 5px);
+            content: '\fa-cog';
           }  
         }
       }

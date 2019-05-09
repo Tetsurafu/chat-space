@@ -4,12 +4,10 @@
       = current_user.name
     %ul.user-menu
       %li.user-menu__icon
-        = link_to "new_group" do
+        = link_to new_group_path do
           %i.fa.fa-edit
-        = link_to "/users/:id/edit" do
+        = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
-          -# prefixではなくて、/users/:id/editで
-          -# よいのか、グループ作成時に確認する
   .groups 
     .group
       %p.group__group-name Test 2
@@ -26,8 +24,9 @@
     .current-group
       %h2.current-group__name Test 2
       %ul.current-group Member :
-    
+
     .right-header__edit-btn Edit
+
   .messages
     .message
       .basic-info

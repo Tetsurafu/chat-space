@@ -9,8 +9,8 @@
         = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
   .groups 
-    .group
-      - current_user.groups.each do |group|
+    - current_user.groups.each do |group|
+      .group
         = link_to group_messages_path(group) do
           .group__group-name
             = group.name
@@ -38,11 +38,11 @@
         %p.basic-info__date 2019/04/28(Sun) 17:47:08
       %p.message__text Check one, two
 
-  .form   
-    %form
-      %input.form__message{placeholder: 'type a message'}
+  .form
+    = form_for @message do |f|
+      = f.text_field :content, class: 'form__message'
       .form__mask
-        %label.form__mask__image
-          =fa_icon 'picture-o', class: 'icon'
-          %input.hidden{type: 'file'}
-      %input.form__submit{type: 'submit', value: 'Send'}
+        = f.label class: 'form__mask__image'
+          = fa_icon 'picture-o', class: 'icon'
+          = f.text_field :image, class: 'hidden'
+      = f.submit ‘Send’, class: "form__submit"

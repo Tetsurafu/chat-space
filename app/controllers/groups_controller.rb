@@ -26,10 +26,10 @@ class GroupsController < ApplicationController
   end
 
   def index
+    
   end
 
   def edit
-    @group = Group.new
   end
 
   private

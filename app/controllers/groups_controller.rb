@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   protect_from_forgery except: :create
   def new
     @group = Group.new
+    @users = User.all
     @group.users << current_user
   end
 
@@ -20,8 +21,16 @@ class GroupsController < ApplicationController
   def index
   end
 
+  def edit
+    @group = Group.new
+  end
+
   private
   def group_params
     params.require(:group).permit(:name, { :user_ids => []})
+  end
+
+  def user_params
+    params.require(:user).permit(:name, user_ids: [])
   end
 end

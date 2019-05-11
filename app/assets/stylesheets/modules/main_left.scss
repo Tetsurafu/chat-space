@@ -43,10 +43,12 @@
       font-weight: bold;
       &__group-name {
         font-size: 15px;
+        color: $white;
       }
       &__latest-message {
         font-size: 11px;
         margin-top: 5px;
+        color: $white;
       }
     }  
   }

@@ -2,10 +2,7 @@ class GroupsController < ApplicationController
   protect_from_forgery except: :create
   before_action :set_group, only: [:edit, :update]
 
-  def new
-    @group = Group.new
-    @users = User.all
-    @group.users << current_user
+  def index
   end
 
   def create
@@ -17,19 +14,21 @@ class GroupsController < ApplicationController
     end
   end
 
+  def new
+    @group = Group.new
+    @users = User.all
+    @group.users << current_user
+  end
+
+  def edit
+  end
+
   def update
     if @group.update(group_params)
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
       render :edit
     end
-  end
-
-  def index
-    
-  end
-
-  def edit
   end
 
   private

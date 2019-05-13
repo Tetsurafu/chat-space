@@ -24,24 +24,24 @@
     .right-header__edit-btn 
       = link_to 'Edit', edit_group_path(2)
 
-  .messages
-    .message
-      .basic-info
-        %p.basic-info__user tetsuro
-        %p.basic-info__date 2019/04/22(Mon) 10:24:46
-      %p.message__text Second day of Chat Space
+-#   .messages
+-#     .message
+-#       .basic-info
+-#         %p.basic-info__user tetsuro
+-#         %p.basic-info__date 2019/04/22(Mon) 10:24:46
+-#       %p.message__text Second day of Chat Space
 
-    .message
-      .basic-info
-        %p.basic-info__user tetsuro
-        %p.basic-info__date 2019/04/28(Sun) 17:47:08
-      %p.message__text Check one, two
+-#     .message
+-#       .basic-info
+-#         %p.basic-info__user tetsuro
+-#         %p.basic-info__date 2019/04/28(Sun) 17:47:08
+-#       %p.message__text Check one, two
 
-  .form
-    %form
-      %input.form__message
-      .form__mask
-        %label.form__mask__image
-          = fa_icon 'picture-o', class: 'icon'
-          %input.hidden{type: 'file'}
-      %input.form__submit{type: 'submit', value: 'Send'}
+-#  .form
+-#     = form_for [@group, @message] do |f|
+-#       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+-#       .form__mask
+-#         = f.label :image, class: 'form__mask__image' do
+-#           = fa_icon 'picture-o', class: 'icon'
+-#           = f.file_field :image, class: 'hidden'
+-#       = f.submit 'Send', class: 'form__submit'

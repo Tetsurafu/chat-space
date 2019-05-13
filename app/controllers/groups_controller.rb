@@ -3,10 +3,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
   def index
-<<<<<<< HEAD
     @group = Group.new
-=======
->>>>>>> parent of d353097... Finished Message4
   end
 
   def create

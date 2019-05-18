@@ -9,7 +9,7 @@
         = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
   .groups 
-    - @groups.each do |group|
+    - current_user.groups.each do |group|
       .group
         = link_to group_messages_path(group) do
           .group__group-name
@@ -23,7 +23,7 @@
         = @group.name
       .current-group__indivisual 
         Member :
-        - @users.each do |user|
+        - @group.users.each do |user|
           = user.name
     .right-header__edit-btn 
       = link_to 'Edit', edit_group_path(2)

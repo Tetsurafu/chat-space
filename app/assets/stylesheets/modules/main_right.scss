@@ -34,7 +34,9 @@
     }
   }
   .messages {
+    height: calc(100vh - 190px);
     padding: 46px 40px;
+    overflow: scroll;
     .message {
       padding-bottom: 40px;
       .basic-info {
@@ -52,11 +54,11 @@
         }
       }
       p.message__text {
-      &__content {
-        font-size: 14px;
-        color: $thin_gray;
-        margin: 10px auto 10px 0;
-        }
+        &__content {
+          font-size: 14px;
+          color: $thin_gray;
+          margin: 10px auto 10px 0;
+          }
       }
     }
   }
